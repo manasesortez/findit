@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Findit</string>
+    <string name="Bienvenido">Welcome!</string>
+    <string name="drescription">Discover more about us.</string>
+    <string name="drescription_account">create new account !</string>
+    <string name="Register">Register</string>
+    <string name="Log">Login</string>
+    <string name="User">E-mail</string>
+    <string name="paseord">Password</string>
+    <string name="help_us">I forgot the passwod ! </string>
+    <string name="dato_1">Name</string>
+    <string name="dato_2">Lastname</string>
+    <string name="data_forgot">Recover</string>
+    <string name="menu1">Hospitals</string>
+    <string name="menu2">Pharmacies</string>
+    <string name="menu3">Schools</string>
+    <string name="menu4">Restaurants</string>
+    <string name="splash1">Findit is a smart application that helps you find places easily on your phone without the need for a map.</string>
+    <string name="splash2">This is an application created by people who see the need of people for the search for outdated places.</string>
+    <string name="splash3">It is a service created with Salvadoran hands with the vision of growing the economy in the country.</string>
+    <string name="demo">Start demo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="try_again">Try again</string>
+    <string name="error_404">Not found a network in your device, please check your connection.</string>
+
+
+</resources>

@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Findit</string>
+    <string name="Bienvenido">Bienvenido!</string>
+    <string name="drescription">Descubre más acerca de nosotros</string>
+    <string name="drescription_account">Crear cuenta nueva !</string>
+    <string name="Register">Registrar</string>
+    <string name="Log" tools:ignore="ExtraTranslation">Iniciar</string>
+    <string name="User">Correo</string>
+    <string name="paseord">Contraseña</string>
+    <string name="help_us">Olvide Contraseña ! </string>
+    <string name="dato_1">Nombre</string>
+    <string name="dato_2">Apellido</string>
+    <string name="data_forgot">Recuperar</string>
+    <string name="menu1">Hospitales</string>
+    <string name="menu2">Farmacias</string>
+    <string name="menu3">Escuelas</string>
+    <string name="menu4">Restaurantes</string>
+    <string name="splash1">Findit es una aplicacion inteligente que te ayuda a encontrar lugares de forma facil en tu telefono sin necesidad de un mapa.</string>
+    <string name="splash2">Esta es un aplicacion creada por personas que vemos la necesidad de la gente por encontrar el lugar que buscan.</string>
+    <string name="splash3">Es un servicio creada por manos salvadoreñas con la visión de hacer crecer a las personas que lo necesitan.</string>
+    <string name="demo">Iniciar prueba</string>
+    <string name="try_again">Intentar de nuevo</string>
+    <string name="error_404">Tu dispositivo no se puede conectar a la red</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
