@@ -38,8 +38,8 @@
                     android:baselineAligned="false">
 
                 <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
                         android:background="@drawable/log"
                         tools:ignore="ContentDescription,MissingConstraints"
                         android:layout_marginTop="0dp"
@@ -69,12 +69,13 @@
 
                 <androidx.cardview.widget.CardView
                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cv_hospitals"
                         android:layout_gravity="center"
                         android:layout_width="150dp"
                         card_view:cardBackgroundColor="#F4F4F4"
                         android:layout_height="150dp"
                         android:clickable="true"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="35dp"
                         card_view:cardCornerRadius="10dp"
                         android:layout_marginTop="15dp"
                         tools:ignore="KeyboardInaccessibleWidget,RtlHardcoded">
@@ -117,12 +118,13 @@
 
                 <androidx.cardview.widget.CardView
                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cv_pharmacies"
                         android:layout_gravity="center"
                         android:layout_width="150dp"
                         card_view:cardBackgroundColor="#F4F4F4"
                         android:layout_height="150dp"
                         android:layout_marginTop="15dp"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="40dp"
                         android:clickable="true"
                         android:layout_marginRight="50dp"
                         card_view:cardCornerRadius="10dp"
@@ -165,12 +167,13 @@
 
                 <androidx.cardview.widget.CardView
                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cv_schools"
                         android:layout_gravity="center"
                         android:layout_width="150dp"
                         android:layout_marginTop="50dp"
                         card_view:cardBackgroundColor="#F4F4F4"
                         android:layout_height="150dp"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="35dp"
                         android:layout_marginBottom="50dp"
                         android:clickable="true"
                         card_view:cardCornerRadius="10dp"
@@ -214,13 +217,14 @@
 
                 <androidx.cardview.widget.CardView
                         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cv_restaurants"
                         android:layout_gravity="center"
                         android:layout_width="150dp"
                         card_view:cardBackgroundColor="#F4F4F4"
                         android:layout_height="150dp"
                         android:layout_marginTop="50dp"
                         android:layout_marginBottom="50dp"
-                        android:layout_marginLeft="25dp"
+                        android:layout_marginLeft="40dp"
                         android:layout_marginRight="50dp"
                         card_view:cardCornerRadius="10dp"
                         android:clickable="true"

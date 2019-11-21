@@ -3,14 +3,14 @@ package com.wazunga.findit.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
 import com.wazunga.findit.R
-import com.wazunga.findit.activities.Slide1
+import com.wazunga.findit.activities.CategoryActivity
 
 /**
  * A simple [Fragment] subclass.
@@ -32,7 +32,14 @@ class ConnectedFragment : Fragment() {
 
         initComponents(view)
 
-        demoButton.setOnClickListener { startActivity(Intent(context, Slide1::class.java)) }
+        demoButton.setOnClickListener {
+            startActivity(
+                Intent(
+                    context,
+                    CategoryActivity::class.java
+                )
+            )
+        }
 
         return view
     }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+    <ImageView
+            android:id="@+id/iv_type"
+            android:src="@drawable/logo_transparent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop" />
+
+    <TextView
+            android:id="@+id/tv_place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/iv_type"
+            android:layout_toRightOf="@+id/iv_type"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="dadawdawdwd" />
+
+    <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_place_name"
+            android:layout_toEndOf="@+id/iv_type"
+            android:layout_toRightOf="@+id/iv_type"
+            android:textSize="15sp"
+            tools:text="wdawd" />
+
+    <TextView
+            android:id="@+id/tv_vicinity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rating"
+            android:layout_toEndOf="@+id/iv_type"
+            android:layout_toRightOf="@+id/iv_type"
+            android:textSize="15sp"
+            tools:text="wdawd" />
+
+    <TextView
+            android:id="@+id/tv_open_in_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_vicinity"
+            android:layout_toEndOf="@+id/iv_type"
+            android:layout_toRightOf="@+id/iv_type"
+            android:textSize="15sp"
+            tools:text="wdawd" />
+
+    <TextView
+            android:id="@+id/tv_open_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="#4CAF50"
+            android:textStyle="italic"
+            tools:text="Open" />
+</RelativeLayout>

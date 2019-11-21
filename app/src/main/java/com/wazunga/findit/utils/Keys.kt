@@ -7,4 +7,5 @@ package com.wazunga.findit.utils
 open class Keys {
     open val CONNECTED = "200"
     open val NOT_CONNECTED = "404"
+    open val PERMISSION_ID = 42
 }

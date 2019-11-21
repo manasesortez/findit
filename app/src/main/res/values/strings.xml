@@ -20,7 +20,8 @@
     <string name="splash3">Es un servicio creada por manos salvadoreñas con la visión de hacer crecer a las personas que lo necesitan.</string>
     <string name="demo">Iniciar prueba</string>
     <string name="try_again">Intentar de nuevo</string>
-    <string name="error_404">Tu dispositivo no se puede conectar a la red</string>
+    <string name="error_404">Tu dispositivo no está conectado a la red</string>
+    <string name="active_gps">La ubicación está desactivada, por favor activarla.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
