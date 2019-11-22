@@ -6,7 +6,7 @@ package com.wazunga.findit.utils
 
 open class RequestKeys {
     open val REQUEST = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
-    open val KEY = "AIzaSyCIH9no9um2SgnqcX8IWMBHqJieBKT1Jvs"
+    open val KEY = "YOUR_KEY"
     open val SCHOOL_CATEGORY = "school"
     open val HOSPITAL_CATEGORY = "hospital"
     open val PHARMACIES_CATEGORY = "pharmacy"
