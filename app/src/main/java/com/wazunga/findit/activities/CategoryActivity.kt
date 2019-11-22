@@ -70,24 +70,25 @@ class CategoryActivity : AppCompatActivity() {
 
     private fun showPlaces(type: String) {
         val r: String
+        val distance = 2000
         when (type) {
             rKeys.HOSPITAL_CATEGORY -> {
-                r = "${rKeys.REQUEST}location=$lat,$long&radius=1500&" +
+                r = "${rKeys.REQUEST}location=$lat,$long&radius=$distance&" +
                         "type=${rKeys.HOSPITAL_CATEGORY}&key=${rKeys.KEY}"
                 getNearbyPlacesByCurrentLocation(r)
             }
             rKeys.PHARMACIES_CATEGORY -> {
-                r = "${rKeys.REQUEST}location=$lat,$long&radius=1500&" +
+                r = "${rKeys.REQUEST}location=$lat,$long&radius=$distance&" +
                         "type=${rKeys.PHARMACIES_CATEGORY}&key=${rKeys.KEY}"
                 getNearbyPlacesByCurrentLocation(r)
             }
             rKeys.RESTAURANT_CATEGORY -> {
-                r = "${rKeys.REQUEST}location=$lat,$long&radius=1500&" +
+                r = "${rKeys.REQUEST}location=$lat,$long&radius=$distance&" +
                         "type=${rKeys.RESTAURANT_CATEGORY}&key=${rKeys.KEY}"
                 getNearbyPlacesByCurrentLocation(r)
             }
             rKeys.SCHOOL_CATEGORY -> {
-                r = "${rKeys.REQUEST}location=$lat,$long&radius=1500&" +
+                r = "${rKeys.REQUEST}location=$lat,$long&radius=$distance&" +
                         "type=${rKeys.SCHOOL_CATEGORY}&key=${rKeys.KEY}"
                 getNearbyPlacesByCurrentLocation(r)
             }
@@ -102,7 +103,7 @@ class CategoryActivity : AppCompatActivity() {
                 val request = StringRequest(Request.Method.GET, uri, Response.Listener { res ->
                     try {
                         Log.d("VolleyRequest", res)
-                        checkResponseStatus(res)
+                        startActivityByResponseStatus(res)
                     } catch (e: Exception) {
                         Log.e("ExceptionVolley", e.toString())
                     }
@@ -115,7 +116,7 @@ class CategoryActivity : AppCompatActivity() {
     }
 
 
-    private fun checkResponseStatus(res: String) {
+    private fun startActivityByResponseStatus(res: String) {
         val result = Gson().fromJson(res, Result::class.java)
         val statusCode = result.status
 
@@ -128,9 +129,15 @@ class CategoryActivity : AppCompatActivity() {
             }
             rKeys.CODE_400 -> {
                 Toast.makeText(this, rKeys.CODE_400, Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, PlacesErrorActivity::class.java)
+                intent.putExtra(rKeys.TAG_QUEUE, statusCode)
+                startActivity(intent)
             }
             rKeys.CODE_500 -> {
                 Toast.makeText(this, rKeys.CODE_500, Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, PlacesErrorActivity::class.java)
+                intent.putExtra(rKeys.TAG_QUEUE, statusCode)
+                startActivity(intent)
             }
         }
     }

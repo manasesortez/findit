@@ -24,6 +24,8 @@
     <string name="try_again">Try again</string>
     <string name="error_404">Not found a network in your device, please check your connection.</string>
     <string name="active_gps">The location is disabled, please enabled.</string>
+    <string name="msg_404">No se encontraron lugares cercanos.</string>
+    <string name="msg_500">Server error.</string>
 
 
 </resources>

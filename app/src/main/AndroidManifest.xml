@@ -16,7 +16,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".activities.PlacesActivity"></activity>
+        <activity android:name=".activities.PlacesErrorActivity"></activity>
+        <activity android:name=".activities.PlacesActivity" />
         <activity android:name=".activities.PlaceActivity" />
         <activity android:name=".activities.NetworkActivity" />
         <activity

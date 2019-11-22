@@ -1,10 +1,14 @@
 package com.wazunga.findit.adapters
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.wazunga.findit.R
 import com.wazunga.nhulox97.findit.models.Place
@@ -16,10 +20,12 @@ import com.wazunga.nhulox97.findit.models.Place
 class PlacesAdapter : RecyclerView.Adapter<PlacesAdapter.ViewHolder>() {
     var places: ArrayList<Place> = ArrayList()
     lateinit var context: Context
+    lateinit var vh: ViewHolder
 
     fun placesAdapter(places: ArrayList<Place>, context: Context) {
         this.context = context
         this.places = places
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,7 +38,7 @@ class PlacesAdapter : RecyclerView.Adapter<PlacesAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = places.get(position)
+        val item = places[position]
         holder.bind(item, context)
     }
 
@@ -43,12 +49,28 @@ class PlacesAdapter : RecyclerView.Adapter<PlacesAdapter.ViewHolder>() {
         val openInMap = view.findViewById(R.id.tv_open_in_map) as TextView
         val openNow = view.findViewById(R.id.tv_open_now) as TextView
 
+
         fun bind(place: Place, context: Context) {
             placeName.text = place.name
             rating.text = place.rating.toString()
             vicinity.text = place.vicinity
-            openInMap.text = "open"
+            if (place.opening_hours.open_now)
+                openNow.text = "open"
+            else {
+                openNow.text = "closed"
+            }
             openNow.text = place.opening_hours.open_now.toString()
+            openInMap.text = "Open in map"
+            openInMap.setOnClickListener {
+                val gmmIntentUri =
+                    Uri.parse(
+                        "geo:${place.geometry.location.lat}," +
+                                "${place.geometry.location.lng}?q=${place.geometry.location.lat}," +
+                                "${place.geometry.location.lng}"
+                    )
+                val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+                startActivity(context, mapIntent, Bundle())
+            }
         }
     }
 }

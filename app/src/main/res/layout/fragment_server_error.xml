@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.ConnectedFragment">
+        tools:context=".fragments.ServerErrorFragment">
 
     <ScrollView
             android:layout_width="match_parent"
@@ -33,12 +33,12 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                 <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/animation_not_connected"
+                        android:id="@+id/animation_server_error"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/connected" />
+                        app:lottie_rawRes="@raw/error_505" />
             </RelativeLayout>
 
             <TextView
@@ -48,7 +48,7 @@
                     android:layout_marginLeft="50dp"
                     android:layout_marginRight="50dp"
                     android:fontFamily="@font/san_francisco_original"
-                    android:text="@string/splash1"
+                    android:text="@string/msg_500"
                     android:textAlignment="center"
                     android:textColor="#333"
                     android:textSize="20sp"
@@ -57,23 +57,24 @@
                     app:layout_constraintTop_toBottomOf="@+id/container_error" />
 
             <Button
-                    android:id="@+id/start_demo"
+                    android:id="@+id/btn_500"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
                     android:background="@drawable/botto"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="@string/demo"
+                    android:text="@string/try_again"
                     android:textAllCaps="false"
                     android:textColor="#eee"
                     android:textSize="18sp"
-                    android:layout_marginBottom="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/text" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 
 </RelativeLayout>

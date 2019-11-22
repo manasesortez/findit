@@ -10,62 +10,60 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
 import com.wazunga.findit.R
-import com.wazunga.findit.activities.Slide1
+import com.wazunga.findit.activities.CategoryActivity
 
 /**
  * A simple [Fragment] subclass.
  */
-class ConnectedFragment : Fragment() {
+class ServerErrorFragment : Fragment() {
 
-    private lateinit var animationConnected: LottieAnimationView
-    private lateinit var demoButton: Button
+    private lateinit var animation500: LottieAnimationView
+    private lateinit var btn500: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(
-            R.layout.fragment_connected, container,
-            false
-        )
+        val view = inflater.inflate(R.layout.fragment_server_error, container, false)
 
         initComponents(view)
 
-        demoButton.setOnClickListener {
+        btn500.setOnClickListener {
             startActivity(
                 Intent(
                     context,
-                    Slide1::class.java
-                ).putExtra("response", "")
+                    CategoryActivity::class.java
+                )
             )
         }
 
         return view
     }
 
-    private fun initComponents(view: View?) {
-        demoButton = view!!.findViewById(R.id.start_demo)
-        animationConnected = view.findViewById(R.id.animation_not_connected)
 
-        animationConnected.repeatCount = 50
-        animationConnected.speed = 1.0F
-        animationConnected.pauseAnimation()
-        animationConnected.playAnimation()
+    private fun initComponents(view: View?) {
+        btn500 = view!!.findViewById(R.id.btn_500)
+        animation500 = view.findViewById(R.id.animation_server_error)
+
+        animation500.repeatCount = 50
+        animation500.speed = 1.0F
+        animation500.pauseAnimation()
+        animation500.playAnimation()
     }
 
     override fun onDetach() {
         super.onDetach()
-        animationConnected.cancelAnimation()
+        animation500.cancelAnimation()
     }
 
     override fun onStop() {
         super.onStop()
-        animationConnected.pauseAnimation()
+        animation500.pauseAnimation()
     }
 
     override fun onResume() {
         super.onResume()
-        animationConnected.resumeAnimation()
+        animation500.resumeAnimation()
     }
 }

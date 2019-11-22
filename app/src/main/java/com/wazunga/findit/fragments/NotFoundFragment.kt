@@ -10,62 +10,61 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
 import com.wazunga.findit.R
-import com.wazunga.findit.activities.Slide1
+import com.wazunga.findit.activities.CategoryActivity
 
 /**
  * A simple [Fragment] subclass.
  */
-class ConnectedFragment : Fragment() {
+class NotFoundFragment : Fragment() {
 
-    private lateinit var animationConnected: LottieAnimationView
-    private lateinit var demoButton: Button
+    private lateinit var animation404: LottieAnimationView
+    private lateinit var btn404: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(
-            R.layout.fragment_connected, container,
-            false
-        )
+        val view = inflater.inflate(R.layout.fragment_not_found, container, false)
 
         initComponents(view)
 
-        demoButton.setOnClickListener {
+        btn404.setOnClickListener {
             startActivity(
                 Intent(
                     context,
-                    Slide1::class.java
-                ).putExtra("response", "")
+                    CategoryActivity::class.java
+                )
             )
         }
 
         return view
     }
 
-    private fun initComponents(view: View?) {
-        demoButton = view!!.findViewById(R.id.start_demo)
-        animationConnected = view.findViewById(R.id.animation_not_connected)
 
-        animationConnected.repeatCount = 50
-        animationConnected.speed = 1.0F
-        animationConnected.pauseAnimation()
-        animationConnected.playAnimation()
+    private fun initComponents(view: View?) {
+        btn404 = view!!.findViewById(R.id.btn_404)
+        animation404 = view.findViewById(R.id.animation_not_found)
+
+        animation404.repeatCount = 50
+        animation404.speed = 1.0F
+        animation404.pauseAnimation()
+        animation404.playAnimation()
     }
 
     override fun onDetach() {
         super.onDetach()
-        animationConnected.cancelAnimation()
+        animation404.cancelAnimation()
     }
 
     override fun onStop() {
         super.onStop()
-        animationConnected.pauseAnimation()
+        animation404.pauseAnimation()
     }
 
     override fun onResume() {
         super.onResume()
-        animationConnected.resumeAnimation()
+        animation404.resumeAnimation()
     }
+
 }
